@@ -42,9 +42,8 @@ export default function ProductsPage() {
         return matchesCategory && matchesSearch;
       })
       .sort((a, b) => {
-        if (sortBy === 'price-low') return a.price - b.price;
-        if (sortBy === 'price-high') return b.price - a.price;
-        if (sortBy === 'rating') return (b.rating || 5) - (a.rating || 5);
+        if (sortBy === 'price-low') return (a.price || 0) - (b.price || 0);
+        if (sortBy === 'price-high') return (b.price || 0) - (a.price || 0);
         return 0;
       });
   }, [activeCategory, searchQuery, sortBy, language]);
@@ -60,11 +59,11 @@ export default function ProductsPage() {
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 sm:mt-16">
-        
+
         {/* Filter & Search Bar with Clean Spacing */}
         <div className="bg-white rounded-3xl border border-brand-primary/20 p-6 sm:p-7 shadow-soft mb-12">
           <div className="flex flex-col lg:flex-row gap-5 items-stretch lg:items-center justify-between">
-            
+
             {/* Search Input (Touch Target 48px) */}
             <div className="relative flex-1 max-w-lg">
               <Search className="w-5 h-5 text-gray-400 absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none" />
@@ -99,7 +98,6 @@ export default function ProductsPage() {
                 <option value="popular">{t('actions.sortPopular')}</option>
                 <option value="price-low">{t('actions.sortPriceLow')}</option>
                 <option value="price-high">{t('actions.sortPriceHigh')}</option>
-                <option value="rating">{t('actions.sortRating')}</option>
               </select>
             </div>
 
@@ -115,11 +113,10 @@ export default function ProductsPage() {
                 <button
                   key={cat.id}
                   onClick={() => handleCategoryChange(cat.id)}
-                  className={`min-h-[48px] px-5 py-2.5 rounded-2xl text-xs sm:text-sm font-medium whitespace-nowrap transition-all duration-200 flex items-center gap-2 ${
-                    active
-                      ? 'bg-brand-dark text-white shadow-soft scale-105'
-                      : 'bg-brand-rose/60 text-brand-dark hover:bg-brand-rose'
-                  }`}
+                  className={`min-h-[48px] px-5 py-2.5 rounded-2xl text-xs sm:text-sm font-medium whitespace-nowrap transition-all duration-200 flex items-center gap-2 ${active
+                    ? 'bg-brand-dark text-white shadow-soft scale-105'
+                    : 'bg-brand-rose/60 text-brand-dark hover:bg-brand-rose'
+                    }`}
                 >
                   <span>{catName}</span>
                   {active && <span className="w-2 h-2 rounded-full bg-brand-gold" />}
@@ -194,7 +191,7 @@ export default function ProductsPage() {
                   : 'Partner with hundreds of beauty establishments relying on Jawahir Alreem master cartons for dependable salon performance, substantial savings, and official tax invoices.'}
               </p>
             </div>
-            
+
             <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3.5">
               <a
                 href={`https://wa.me/${siteConfig.whatsappNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(language === 'ar' ? 'مرحباً جواهر الريم، أود الاستفسار عن باقات الجملة للمشاغل وصالونات التجميل.' : 'Hello Jawahir Alreem, I would like to inquire about wholesale salon bundles.')}`}

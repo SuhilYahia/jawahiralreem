@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ShoppingBag, Eye, Star } from 'lucide-react';
+import { ShoppingBag, Eye } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
 import ProductQuickView from './ProductQuickView';
 
@@ -64,16 +64,6 @@ export default function ProductCard({ product, index = 0 }) {
         {/* Content Area */}
         <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between text-start">
           <div>
-            {/* Rating */}
-            <div className="flex items-center gap-1 text-amber-500 mb-2.5">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
-              ))}
-              <span className="text-xs text-brand-text-muted font-normal ml-1.5 mr-1.5">
-                (5.0)
-              </span>
-            </div>
-
             {/* Title */}
             <h3 className="text-base sm:text-lg font-semibold text-brand-dark leading-snug line-clamp-2 group-hover:text-brand-primary-dark transition-colors">
               {productName}
@@ -87,20 +77,22 @@ export default function ProductCard({ product, index = 0 }) {
 
           <div className="mt-6 pt-4 border-t border-brand-primary/15">
             {/* Price */}
-            <div className="flex items-baseline justify-between mb-4">
-              <div className="flex items-baseline gap-1.5">
-                <span className="text-2xl font-bold text-brand-dark">{product.price}</span>
-                <span className="text-xs font-medium text-brand-dark">{productCurrency}</span>
-                {product.originalPrice && (
-                  <span className="text-xs text-gray-400 line-through mr-1.5 ml-1.5">
-                    {product.originalPrice} {productCurrency}
-                  </span>
-                )}
+            {!product.hidePrice && product.price ? (
+              <div className="flex items-baseline justify-between mb-4">
+                <div className="flex items-baseline gap-1.5">
+                  <span className="text-2xl font-bold text-brand-dark">{product.price}</span>
+                  <span className="text-xs font-medium text-brand-dark">{productCurrency}</span>
+                  {product.originalPrice && (
+                    <span className="text-xs text-gray-400 line-through mr-1.5 ml-1.5">
+                      {product.originalPrice} {productCurrency}
+                    </span>
+                  )}
+                </div>
+                <span className="text-[11px] text-emerald-800 bg-emerald-100 px-2.5 py-0.5 rounded-md font-medium">
+                  {t('actions.taxIncluded')}
+                </span>
               </div>
-              <span className="text-[11px] text-emerald-800 bg-emerald-100 px-2.5 py-0.5 rounded-md font-medium">
-                {t('actions.taxIncluded')}
-              </span>
-            </div>
+            ) : null}
 
             {/* Action Buttons (Touch Targets 48px) */}
             <div className="grid grid-cols-2 gap-2.5">

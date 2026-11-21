@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ShoppingBag, MessageCircle, Star, CheckCircle2, Sparkles, ExternalLink } from 'lucide-react';
+import { X, ShoppingBag, MessageCircle, CheckCircle2, Sparkles, ExternalLink } from 'lucide-react';
 import { siteConfig } from '../../config/site';
 import { useLanguage } from '../../context/LanguageContext';
 
@@ -8,6 +8,7 @@ export default function ProductQuickView({ product, isOpen, onClose }) {
   if (!product) return null;
 
   const productName = product['name_' + language] || product.name_ar;
+  const productSubtitle = product['subtitle_' + language] || product.subtitle_ar;
   const productCategory = product['categoryName_' + language] || product.categoryName_ar;
   const productBadge = product['badge_' + language] || product.badge_ar;
   const productCurrency = product['currency_' + language] || product.currency_ar;
@@ -17,8 +18,8 @@ export default function ProductQuickView({ product, isOpen, onClose }) {
 
   const whatsappMessage = encodeURIComponent(
     language === 'ar'
-      ? `مرحباً مصنع جواهر الريم، أود طلب واستفسار عن:\n*${productName}*\nالسعر: ${product.price} ${productCurrency}`
-      : `Hello Jawahir Alreem, I would like to inquire/order:\n*${productName}*\nPrice: ${product.price} ${productCurrency}`
+      ? `مرحباً مصنع جواهر الريم، أود طلب واستفسار عن:\n*${productName}*${!product.hidePrice && product.price ? `\nالسعر: ${product.price} ${productCurrency}` : ''}`
+      : `Hello Jawahir Alreem, I would like to inquire/order:\n*${productName}*${!product.hidePrice && product.price ? `\nPrice: ${product.price} ${productCurrency}` : ''}`
   );
   const directWhatsAppUrl = `https://wa.me/${siteConfig.whatsappNumber.replace(/[^0-9]/g, '')}?text=${whatsappMessage}`;
 
@@ -54,7 +55,7 @@ export default function ProductQuickView({ product, isOpen, onClose }) {
 
             <div className="overflow-y-auto p-6 sm:p-10">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-                
+
                 {/* Product Image Showcase */}
                 <div className="relative rounded-2xl bg-gradient-to-b from-brand-rose/40 to-brand-sand/20 p-8 flex items-center justify-center border border-brand-primary/20 aspect-square overflow-hidden group">
                   <img
@@ -75,34 +76,33 @@ export default function ProductQuickView({ product, isOpen, onClose }) {
                 {/* Details */}
                 <div className="space-y-5 text-start">
                   <div>
-                    <div className="flex items-center gap-1.5 text-amber-500 mb-2">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
-                      ))}
-                      <span className="text-xs text-brand-text-muted font-normal mr-2 ml-2">
-                        (5.0 / 5.0)
+                    {productSubtitle && (
+                      <span className="text-xs font-semibold text-brand-primary-dark mb-1.5 block">
+                        {productSubtitle}
                       </span>
-                    </div>
+                    )}
                     <h3 className="text-xl sm:text-2xl font-bold text-brand-dark leading-[1.4]">
                       {productName}
                     </h3>
                   </div>
 
                   {/* Price Banner */}
-                  <div className="flex items-baseline gap-3 p-4 rounded-2xl bg-brand-rose/50 border border-brand-primary/20">
-                    <span className="text-3xl font-bold text-brand-dark">
-                      {product.price}
-                    </span>
-                    <span className="text-sm font-medium text-brand-dark">{productCurrency}</span>
-                    {product.originalPrice && (
-                      <span className="text-sm text-gray-400 line-through">
-                        {product.originalPrice} {productCurrency}
+                  {!product.hidePrice && product.price ? (
+                    <div className="flex items-baseline gap-3 p-4 rounded-2xl bg-brand-rose/50 border border-brand-primary/20">
+                      <span className="text-3xl font-bold text-brand-dark">
+                        {product.price}
                       </span>
-                    )}
-                    <span className="text-xs text-emerald-800 bg-emerald-100 font-medium px-2.5 py-1 rounded-md ml-auto mr-auto">
-                      {t('actions.taxIncluded')}
-                    </span>
-                  </div>
+                      <span className="text-sm font-medium text-brand-dark">{productCurrency}</span>
+                      {product.originalPrice && (
+                        <span className="text-sm text-gray-400 line-through">
+                          {product.originalPrice} {productCurrency}
+                        </span>
+                      )}
+                      <span className="text-xs text-emerald-800 bg-emerald-100 font-medium px-2.5 py-1 rounded-md ml-auto mr-auto">
+                        {t('actions.taxIncluded')}
+                      </span>
+                    </div>
+                  ) : null}
 
                   {/* Description */}
                   <p className="text-xs sm:text-sm text-brand-text-muted leading-relaxed font-normal">

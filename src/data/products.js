@@ -23,14 +23,12 @@ export const productsData = [
     currency_en: "SAR",
     originalPrice: 65.00,
     image: roseCareImg,
-    rating: 5,
-    reviewsCount: 124,
     url: "https://store.jawahiralreem.sa/products/روز-كير-كلاسيك-رذاذ-مرطب-للوجه-بماء-الورد-والصبار-جواهر-الريم-",
     badge_ar: "الأكثر مبيعاً",
     badge_en: "Best Seller",
     isPopular: true,
     inStock: true,
-    description_ar: "رذاذ مرطب ومنعش فائق النقاء مستخلص من ماء الورد الطبيعي وخلاصة الصبار الفعالة، يعمل على تهدئة البشرة بعد إزالة الشعر أو التعرض للشمس ويعيد النضارة طوال اليوم.",
+    description_ar: "رذاذ مرطب ومنعش للوجه يجمع بين ماء الورد الطبيعي والصبار لترطيب فوري ونضارة قبل أو بعد المكياج. مناسب للبشرة الحساسة وخالٍ من الكحول والبارابين",
     description_en: "An ultra-pure hydrating mist infused with natural rosewater and organic aloe vera extract. Calms sensitive skin, soothes post-hair-removal redness, and revitalizes radiance all day.",
     benefits_ar: [
       "ترطيب فوري وعميق للبشرة الجافة والمجهدة",
@@ -63,7 +61,7 @@ export const productsData = [
   },
   {
     id: "coconut-hair-remover",
-    name_ar: "حلاوة لازالة الشعر من جواهر الريم بزيت جوز الهند للبشرة الجافة والعادية 500 جرام",
+    name_ar: "حلاوة لازالة الشعر من جواهر الريم بزيت جوز الهند للبشرة الجافة والعادية – لإزالة الشعر من الجذور مع ترطيب ونعومة 500 جرام",
     name_en: "Jawahir Alreem Natural Sugar Wax Hair Remover with Coconut Oil 500g",
     shortName_ar: "حلاوة إزالة الشعر بزيت جوز الهند 500 جم",
     shortName_en: "Coconut Oil Sugar Wax 500g",
@@ -75,14 +73,12 @@ export const productsData = [
     currency_en: "SAR",
     originalPrice: 25.00,
     image: coconutHalawaImg,
-    rating: 5,
-    reviewsCount: 218,
     url: "https://store.jawahiralreem.sa/products/جواهر-الريم-حلاوة-إزالة-الشعر-بزيت-جوز-الهند",
     badge_ar: "الأصالة منذ 1999",
     badge_en: "Heritage Since 1999",
     isPopular: true,
     inStock: true,
-    description_ar: "التركيبة الكلاسيكية الشهيرة التي وثقت بها الأجيال منذ 1999م، مطورة بزيت جوز الهند البكر. تزيل الشعر من الجذور حتى أقصر الشعيرات مع الحفاظ على مرونة ونعومة الجلد وترطيبه كالحرير.",
+    description_ar: "حلاوة جواهر الريم بزيت جوز الهند، مزيل طبيعي للشعر من الجذور بمكونات نقية 100%. تمنحك ترطيباً فائقاً وتمنع الجفاف خصيصاً للبشرة الجافة والعادية. منتج سعودي معتمد من الغذاء والدواء وبشهادات جودة عالمية لنعومة حريرية تدوم طويلاً.",
     description_en: "The iconic traditional formula trusted since 1999, enriched with virgin coconut oil. Removes even the shortest hair from the root while moisturizing skin to silky perfection without irritation.",
     benefits_ar: [
       "إزالة كاملة للشعر من الجذور تمنح نعومة تدوم لأسابيع",
@@ -115,54 +111,53 @@ export const productsData = [
   },
   {
     id: "rosecare-bundle-saving",
-    name_ar: "باقة التوفير الملكية – مجموعة العناية والنعومة المتكاملة من روز كير وحلاوة جواهر الريم",
-    name_en: "Royal Saving Bundle – Comprehensive Smoothness Routine with Rose Care & Sugar Wax",
-    shortName_ar: "باقة التوفير الملكية المتكاملة",
-    shortName_en: "Royal Saving Beauty Bundle",
+    name_ar: "باقات التوفير منتجات العناية بالبشرة | جواهر الريم - مجموعة روز كير",
+    name_en: "Saving Bundles Skincare Products | Jawahir Alreem - Rose Care Collection",
+    shortName_ar: "باقات التوفير منتجات العناية بالبشرة",
+    shortName_en: "Skincare Saving Bundles",
     category: "bundles",
     categoryName_ar: "باقات التوفير",
     categoryName_en: "Value Bundles",
-    price: 68.00,
-    currency_ar: "ر.س",
-    currency_en: "SAR",
-    originalPrice: 85.00,
-    image: heroBanner,
-    rating: 5,
-    reviewsCount: 89,
-    url: "https://store.jawahiralreem.sa/categories/1574327/باقات-التوفير",
-    badge_ar: "توفير 20%",
-    badge_en: "Save 20%",
+    price: null,
+    hidePrice: true,
+    image: "https://media.zid.store/b55ee141-41bc-4121-940c-39c74f34f22b/57bad5cf-38dc-420d-8461-da8147dc9d81.jpg",
+    url: "https://store.jawahiralreem.sa/categories/1574327/%D8%A8%D8%A7%D9%82%D8%A7%D8%AA-%D8%A7%D9%84%D8%AA%D9%88%D9%81%D9%8A%D8%B1-%D8%AC%D9%88%D8%A7%D9%87%D8%B1-%D8%A7%D9%84%D8%B1%D9%8A%D9%85",
+    badge_ar: "باقات التوفير",
+    badge_en: "Value Bundles",
     isPopular: true,
     inStock: true,
-    description_ar: "المجموعة المثالية لروتين العناية المتكامل: تجمع بين رذاذ روز كير بماء الورد والصبار المنعش، وعبوة حلاوة إزالة الشعر الطبيعية بزيت جوز الهند 500 جم لإزالة وتهدئة وترطيب عميق.",
-    description_en: "The quintessential complete beauty ritual: combines Rose Care refreshing facial mist (165ml) and Coconut Oil natural sugar wax (500g) for flawless removal and soothing hydration.",
+    description_ar: "تسوقي أفضل منتجات العناية بالبشرة الطبيعية من مصنع جواهر الريم بالمدينة المنورة. اكتشفي رذاذ روز كير المرطب بماء الورد الطبيعي والصبار لإعادة النضارة والترطيب اليومي لبشرتك.",
+    description_en: "Shop the finest natural skincare from Jawahir Alreem Factory in Madinah. Discover Rose Care hydrating mist with natural rosewater and aloe vera for daily radiance.",
+    /*
     benefits_ar: [
-      "روتين متكامل: إزالة طبيعية ثم ترطيب فوري مهدئ",
-      "توفير مالي مميز يصل إلى 20% مقارنة بالشراء المنفرد",
-      "مناسبة جداً للاستخدام الشخصي أو كهدية فاخرة",
-      "تغليف محكم يحافظ على فاعلية وجودة المكونات"
+      "رذاذ روز كير بماء الورد الطبيعي وخلاصة الصبار النقي",
+      "ترطيب فوري عميق ونضارة وحيوية تدوم طوال اليوم",
+      "باقات توفير حصرية مباشرة من مصنع جواهر الريم بالمدينة المنورة",
+      "منتجات معتمدة ومطابقة لأعلى معايير هيئة الغذاء والدواء SFDA"
     ],
     benefits_en: [
-      "Complete 2-step routine: natural removal followed by instant cooling hydration",
-      "Substantial 20% financial saving versus buying individually",
-      "Ideal for personal self-care or an elegant luxury gift",
-      "Sealed packaging preserving maximum ingredient freshness"
+      "Rose Care Mist with natural rosewater and pure organic aloe vera",
+      "Instant deep hydration and vibrant radiance throughout the day",
+      "Exclusive value bundles directly from Jawahir Alreem factory in Madinah",
+      "Certified products meeting strict SFDA pharmaceutical and cosmetic standards"
     ],
-    howToUse_ar: "استخدمي الحلاوة لإزالة الشعر، ثم رشي رذاذ روز كير فوراً لتهدئة المسام وترطيب البشرة برائحة الورد.",
-    howToUse_en: "Use sugar wax for hair removal, then immediately mist Rose Care to calm pores and indulge in pure rose fragrance.",
+    howToUse_ar: "يُرش رذاذ روز كير على الوجه والرقبة صباحاً ومساءً أو كلما دعت الحاجة لترطيب فوري وانتعاش طبيعي.",
+    howToUse_en: "Mist Rose Care over face and neck morning and evening, or whenever needed for instant pure freshness.",
+    */
     specs_ar: [
-      { label: "المحتويات", value: "رذاذ روز كير 165 مل + حلاوة 500 جم" },
-      { label: "الهدف", value: "إزالة الشعر + تهدئة وترطيب عميق" },
-      { label: "القيمة المضافة", value: "توفير يصل إلى 20% على المجموعة" },
-      { label: "بلد الصنع", value: "المملكة العربية السعودية (المدينة المنورة)" }
+      { label: "التصنيف", value: "باقات التوفير - مجموعة روز كير" },
+      { label: "المكونات الأساسية", value: "ماء الورد الطبيعي + خلاصة الصبار النقي" },
+      { label: "الجهة المصنعة", value: "مصنع جواهر الريم للصناعة - المدينة المنورة" },
+      { label: "الاعتماد", value: "مسجل ومعتمد لدى هيئة الغذاء والدواء (SFDA)" }
     ],
     specs_en: [
-      { label: "Contents", value: "Rose Care Mist 165ml + Sugar Wax 500g" },
-      { label: "Purpose", value: "Hair Removal + Deep Soothing Hydration" },
-      { label: "Value", value: "20% Package Discount Included" },
-      { label: "Origin", value: "Saudi Arabia (Madinah)" }
+      { label: "Category", value: "Value Bundles - Rose Care Collection" },
+      { label: "Key Ingredients", value: "Natural Rosewater + Organic Aloe Vera" },
+      { label: "Manufacturer", value: "Jawahir Alreem Industry Factory - Madinah" },
+      { label: "Certification", value: "Registered & Approved by Saudi FDA (SFDA)" }
     ]
   },
+  /*
   {
     id: "rosecare-duo-pack",
     name_ar: "بكج الثنائي المنعش – عبوتين من رذاذ روز كير بماء الورد الطبيعي وخلاصة الصبار",
@@ -177,8 +172,6 @@ export const productsData = [
     currency_en: "SAR",
     originalPrice: 110.00,
     image: rosecareBanner,
-    rating: 5,
-    reviewsCount: 64,
     url: "https://store.jawahiralreem.sa/categories/1574327/باقات-التوفير",
     badge_ar: "عرض خاص",
     badge_en: "Special Offer",
@@ -211,55 +204,28 @@ export const productsData = [
       { label: "Origin", value: "Saudi Arabia (Madinah)" }
     ]
   },
+  */
   {
     id: "salon-wholesale-halawa",
-    name_ar: "كرتون حلاوة جواهر الريم بزيت جوز الهند – مخصص للصالونات ومشاغل التجميل",
-    name_en: "Salon Wholesale Master Carton – Jawahir Alreem Coconut Sugar Wax for Professional Salons",
-    shortName_ar: "باقة المشاغل والصالونات (بالجملة)",
-    shortName_en: "Professional Salon Bulk Carton",
+    name_ar: "منتجات إزالة الشعر",
+    name_en: "Hair Removal Products",
+    shortName_ar: "منتجات إزالة الشعر",
+    shortName_en: "Hair Removal Products",
+    subtitle_ar: "المنتجات",
+    subtitle_en: "Products",
     category: "hair-remover",
-    categoryName_ar: "إزالة الشعر الطبيعية",
-    categoryName_en: "Natural Hair Removal",
-    price: 180.00,
-    currency_ar: "ر.س",
-    currency_en: "SAR",
-    originalPrice: 220.00,
-    image: halawaBanner,
-    rating: 5,
-    reviewsCount: 96,
-    url: "https://store.jawahiralreem.sa/categories/1561222/natural-hair-remover-with-coconut-oil",
-    badge_ar: "للصالونات والمشاغل",
-    badge_en: "For Salons & Spas",
+    categoryName_ar: "المنتجات",
+    categoryName_en: "Products",
+    price: null,
+    hidePrice: true,
+    image: "https://media.zid.store/b55ee141-41bc-4121-940c-39c74f34f22b/cc45bd1f-8517-41d2-b170-876ae2571576.png",
+    url: "https://store.jawahiralreem.sa/categories/1561222/%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA-%D8%A5%D8%B2%D8%A7%D9%84%D8%A9-%D8%A7%D9%84%D8%B4%D8%B9%D8%B1-%D8%AC%D9%88%D8%A7%D9%87%D8%B1-%D8%A7%D9%84%D8%B1%D9%8A%D9%85",
+    badge_ar: "المنتجات",
+    badge_en: "Products",
     isPopular: false,
     inStock: true,
-    description_ar: "الخيار الأول والمفضل لكبرى صالونات ومشاغل التجميل في المدينة المنورة والمملكة. كرتون اقتصادي متعدد العبوات بجودة موثوقة وثابتة وتوفير مالي كبير للمشاغل المحترفة مع فواتير ضريبية معتمدة.",
-    description_en: "The preferred number-one choice for elite beauty salons and spas across Saudi Arabia. Bulk carton with consistent salon-grade performance, direct factory pricing, and certified tax invoices.",
-    benefits_ar: [
-      "سعر جملة خاص ومباشر من المصنع للصالونات والمشاغل",
-      "جودة عالية وثابتة تضمن راحة عميلاتك ورضاهن التام",
-      "قوام مرن لا يلتصق بالجلد ولا يسبب التحسس",
-      "توصيل سريع وتوريد دوري مستمر مع فواتير ضريبية"
-    ],
-    benefits_en: [
-      "Direct wholesale factory pricing for salons and spas",
-      "Consistent master-batch quality ensuring high client satisfaction",
-      "Smooth non-sticky application that prevents irritation",
-      "Reliable scheduled delivery and official tax compliance"
-    ],
-    howToUse_ar: "مخصصة للاستخدام الاحترافي في غرف العناية بالبشرة والمشاغل النسائية.",
-    howToUse_en: "Formulated for professional beauticians and aesthetic skincare salons.",
-    specs_ar: [
-      { label: "الفئة المستهدفة", value: "الصالونات والمشاغل ومراكز التجميل" },
-      { label: "العبوة", value: "كرتون متعدد العبوات بحجم 500 جم للعبوة" },
-      { label: "الميزة", value: "أسعار جملة وتوريد دوري مستمر" },
-      { label: "بلد الصنع", value: "المملكة العربية السعودية (المدينة المنورة)" }
-    ],
-    specs_en: [
-      { label: "Target Audience", value: "Beauty salons, spas, & skin clinics" },
-      { label: "Package", value: "Master carton of 500g tubs" },
-      { label: "Advantage", value: "Direct wholesale rates & standing supply" },
-      { label: "Origin", value: "Saudi Arabia (Madinah)" }
-    ]
+    description_ar: "تسوقي حلاوة جواهر الريم الطبيعية لإزالة الشعر من الجذور. تركيبات متنوعة (الصمغ العربي، شمع النحل، زيت جوز الهند، والليمون) لتنعيم البشرة وتغذيتها ولائم كافة انواع البشرة.",
+    description_en: "Shop Jawahir Alreem natural sugar wax hair remover from the roots. Diverse formulas (gum arabic, beeswax, coconut oil, lemon) to soften, nourish, and suit all skin types."
   }
 ];
 
