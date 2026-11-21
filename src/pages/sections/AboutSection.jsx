@@ -48,7 +48,7 @@ export default function AboutSection() {
                 />
                 <div className="pt-4 pb-2 border-t border-brand-rose mt-3 text-center">
                   <div className="text-base font-bold text-brand-dark">
-                    {language === 'ar' ? 'مصنع جواهر الريم للصناعة' : 'Jawahir Alreem Industrial Plant'}
+                    {language === 'ar' ? 'مصنع جواهر الريم ' : 'Jawahir Alreem Industrial Plant'}
                   </div>
                   <div className="text-xs text-brand-text-muted mt-1 font-normal">
                     {language === 'ar' ? 'المدينة المنورة • سجل تجاري:' : 'Madinah, KSA • CR:'} {siteConfig.commercialRegistration}
