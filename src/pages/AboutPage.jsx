@@ -235,18 +235,18 @@ export default function AboutPage() {
         </section>
 
         {/* Factory Standards Banner */}
-        <section className="bg-gradient-to-r from-brand-dark to-brand-espresso text-white rounded-3xl p-8 sm:p-14 shadow-elevated relative overflow-hidden text-center sm:text-start">
-          <div className="absolute top-0 right-0 w-80 h-80 bg-brand-primary/10 rounded-full blur-3xl pointer-events-none" />
+        <section className="bg-gradient-to-r from-brand-primary via-brand-button to-brand-primary text-brand-dark rounded-3xl p-8 sm:p-14 shadow-elevated relative overflow-hidden text-center sm:text-start border border-brand-primary/30">
+          <div className="absolute top-0 right-0 w-80 h-80 bg-white/30 rounded-full blur-3xl pointer-events-none" />
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-8 space-y-4">
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-brand-primary-light text-xs font-medium">
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 text-brand-dark text-xs font-medium border border-white/90 shadow-soft">
                 <ShieldCheck className="w-4 h-4 text-brand-gold" />
                 <span>{language === 'ar' ? 'أعلى معايير التصنيع الدوائي والتجميلي' : 'Pharmaceutical & Cosmetic GMP Standards'}</span>
               </span>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-[1.4]">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-dark leading-[1.4]">
                 {language === 'ar' ? 'مصنع وطني بمعايير ترتقي لتطلعاتك' : 'National Manufacturing Meeting Global Ambition'}
               </h2>
-              <p className="text-xs sm:text-sm text-white/85 leading-relaxed max-w-2xl font-normal">
+              <p className="text-xs sm:text-sm text-brand-dark/85 leading-relaxed max-w-2xl font-normal">
                 {language === 'ar'
                   ? 'نعتمد بروتوكولات صارمة لضبط الجودة، بدءاً من اختبار المكونات الخام الطبيعية وانتهاءً بالتغليف الآلي المحكم لضمان نقاء وفاعلية كل عبوة تصل إليك.'
                   : 'We enforce stringent quality control protocols, from rigorous raw botanical testing to hermetic sterile packaging, guaranteeing absolute freshness in every bottle.'}
@@ -256,14 +256,14 @@ export default function AboutPage() {
             <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3.5 justify-center">
               <Link
                 to="/products"
-                className="min-h-[48px] inline-flex items-center justify-center gap-2 bg-white text-brand-dark py-3.5 px-6 rounded-2xl text-xs sm:text-sm font-semibold hover:bg-brand-rose transition-colors shadow-md"
+                className="min-h-[48px] inline-flex items-center justify-center gap-2 bg-brand-dark text-white py-3.5 px-6 rounded-2xl text-xs sm:text-sm font-semibold hover:bg-brand-darker transition-colors shadow-md"
               >
                 <span>{t('hero.exploreCatalog')}</span>
                 <ArrowIcon className="w-4 h-4" />
               </Link>
               <Link
                 to="/contact"
-                className="min-h-[48px] inline-flex items-center justify-center gap-2 bg-transparent text-white border border-white/30 py-3.5 px-6 rounded-2xl text-xs sm:text-sm font-medium hover:bg-white/10 transition-colors"
+                className="min-h-[48px] inline-flex items-center justify-center gap-2 bg-white/90 text-brand-dark border border-brand-dark/15 py-3.5 px-6 rounded-2xl text-xs sm:text-sm font-medium hover:bg-white transition-colors shadow-soft"
               >
                 <span>{t('nav.contact')}</span>
               </Link>

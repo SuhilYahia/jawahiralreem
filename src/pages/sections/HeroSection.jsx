@@ -45,9 +45,11 @@ export default function HeroSection() {
               animate="visible"
               className="space-y-4"
             >
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-brand-dark leading-[1.4] sm:leading-[1.45] tracking-normal">
-                {t('hero.titleLine1')}
-                <span className="block text-xl sm:text-2xl md:text-3xl font-semibold text-brand-primary-dark mt-4 leading-normal">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-brand-dark leading-[1.35] sm:leading-[1.4] tracking-normal">
+                <span className="block">
+                  {t('hero.titleLine1')}
+                </span>
+                <span className="block text-xl sm:text-2xl md:text-3xl font-semibold text-brand-primary-dark mt-2.5 sm:mt-3.5 pt-1 sm:pt-1.5 leading-relaxed">
                   {t('hero.titleLine2')}
                 </span>
               </h1>

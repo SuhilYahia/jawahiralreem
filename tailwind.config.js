@@ -11,9 +11,9 @@ export default {
           button: '#ecc9b1',
           'button-hover': '#dfb295',
           // High contrast text colors (WCAG 2.2 AAA compliant)
-          dark: '#240d02',
+          dark: '#361502',
           darker: '#160700',
-          espresso: '#361502',
+          espresso: '#e7b397',
           cream: '#fdfbf9',
           nude: '#f8ece5',
           rose: '#faf0ea',
